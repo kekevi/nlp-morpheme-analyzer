@@ -2,7 +2,18 @@
 
 by Kevin Chen
 
----
+# File Structure
+* `models` folder contains trained models
+* `morphemes_files` folder contains cached csv of words broken into morphemes and MorphoLex xslx-s for the `morphemes` package to parse
+* `morpheme_segmenter_parallel.py` creates a csv cache from the `morphemes` package. Words are in the first column and their derivational morphemes are space separated in the second column.
+* `inflectionizer.py` takes in the csv ouput from above and adds inflectional morphemes to it 
+* `morpheme_analysis.ipynb` embeds all morphemes as the average value of the embeddings of words containing that morpheme
+* `morpheme_segmentation.ipynb` defines a transformer model to automatically tokenize morphemes
+* `morpheme_lemmatizer.ipynb` defines *the start* of a FFN model to automatically lemmatize/regularize morphemes
+* `definition_to_morphemes.ipynb` defines a seq2seq encoder-decoder model to take a input string definition and return a sequence of morphemes that when concatenated mean that definition
+* `definition_to_characters.ipynb` similar to above but outputs a sequence of letters
+
+# Approach
 
 Most NLP approaches to language have the *word* as the atomic unit of meaning, which in languages with an alphabetic orthography is easy to determine being space separated. However, linguistically and psychologically, the *morpheme* is the atomic unit of meaning. This is extra-important for languages with rich morphology like Finnish, or languages with an unclear separation between words and characters like Japanese. 
 
