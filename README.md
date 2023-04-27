@@ -1,6 +1,6 @@
 # Analyzing Usefulness of Morpheme Analysis in NLP
 
-by Kevin Chen
+by Kevin Chen  
 Link to Presentation Resources: https://drive.google.com/drive/folders/1Zw4l5wb_zyAa5QEXYDvPbh6taLSnziD1?usp=sharing
 
 # File Structure
